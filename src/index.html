@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+* Author: Seif Otefa
+* Student Number: 400557672
+* Date: 21/2/2025
+* Description: This is a Rock Paper Scissors game that allows two players to compete
+*              against each other. Players can enter their names and choose colors,
+*              then take turns selecting moves until one player reaches 3 points.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="welcome-screen">
+    <h1>Rock Paper Scissors</h1>
+    <p>Enter User 1's name and favorite color:</p>
+    <input type="text" id="user1-name" placeholder="User 1 Name">
+    <select id="user1-color">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+      <option value="purple">Purple</option>
+      <option value="pink">Pink</option>
+      <option value="orange">Orange</option>
+      <option value="teal">Teal</option>
+      <option value="indigo">Indigo</option>
+      <option value="lime">Lime</option>
+    </select>
+    
+    <p>Enter User 2's name and favorite color:</p>
+    <input type="text" id="user2-name" placeholder="User 2 Name">
+    <select id="user2-color">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+      <option value="purple">Purple</option>
+      <option value="pink">Pink</option>
+      <option value="orange">Orange</option>
+      <option value="teal">Teal</option>
+      <option value="indigo">Indigo</option>
+      <option value="lime">Lime</option>
+    </select>
+
+    <button id="start-game-btn">Start Game</button>
+  </div>
+
+  <div id="game-screen" style="display:none;">
+    <h2 id="turn-display"></h2>
+    <div id="choices">
+      <button class="choice-btn" data-choice="rock">Rock</button>
+      <button class="choice-btn" data-choice="paper">Paper</button>
+      <button class="choice-btn" data-choice="scissors">Scissors</button>
+    </div>
+    <div id="result"></div>
+    <div id="score">
+      <p><span id="score-name-1"></span>: <span id="score-user1">0</span></p>
+      <p><span id="score-name-2"></span>: <span id="score-user2">0</span></p>
+    </div>
+    <button id="help-btn">Help</button>
+    <div id="help-message" style="display:none;">
+      <p>Instructions: Choose Rock, Paper, or Scissors. The first player to reach 3 points wins.</p>
+    </div>
+  </div>
+
+  <div id="game-over-screen" class="screen" style="display:none;">
+    <div class="game-over-content">
+      <h2>Game Over!</h2>
+      <p id="winner-display"></p>
+      <div class="button-container">
+        <button id="play-again-btn">Play Again (Same Players)</button>
+        <button id="new-game-btn">New Game (Start Over)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
